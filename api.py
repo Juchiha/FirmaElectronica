@@ -10,6 +10,7 @@ app = FastAPI()
 
 class XMLRequest(BaseModel):
     xml_string: str
+    xml_tipo: str
 
 @app.post("/sign_xml")
 def sign_xml(request: XMLRequest):
@@ -19,8 +20,9 @@ def sign_xml(request: XMLRequest):
         # Convertir el XML recibido en un objeto `etree.Element`
         xml_element = etree.fromstring(xml_string.encode("utf-8"))
 
+        print(request.xml_tipo)
         # Instanciar el firmante
-        firmanteXml = XmlSignerV3(xml_element, "FV")
+        firmanteXml = XmlSignerV3(xml_element, request.xml_tipo)
 
         # Firmar el XML
         signed_xml_string = firmanteXml.sign()

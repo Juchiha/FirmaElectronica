@@ -38,11 +38,11 @@ xml = """<?xml version='1.0' encoding='utf-8'?>
                         <sts:ProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="9" schemeName="31">900479894</sts:ProviderID>
                         <sts:SoftwareID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">0c57f60b-b86f-4a2f-b952-a26efe8321e3</sts:SoftwareID>
                     </sts:SoftwareProvider>
-                    <sts:SoftwareSecurityCode schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">e0b54a13cc345a7d6c9e30aa70084104d7e958305261562efc88ba617ee13fac1abb79a4ac677ee6e1848ff7f741a19e</sts:SoftwareSecurityCode>
+                    <sts:SoftwareSecurityCode schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)">496b830930e44917510c0452dd9ecffa3684996dc78c8252d14f79a6f9f3f34fe91a1d09bd03ee4757dee89f438a7ff3</sts:SoftwareSecurityCode>
                     <sts:AuthorizationProvider>
                         <sts:AuthorizationProviderID schemeAgencyID="195" schemeAgencyName="CO, DIAN (Dirección de Impuestos y Aduanas Nacionales)" schemeID="4" schemeName="31">800197268</sts:AuthorizationProviderID>
                     </sts:AuthorizationProvider>
-                    <sts:QRCode>https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=a475460eb27ba6359abbc3d520f966dd68782667684f0e9ab241a1f606aa0aab0b82c0d7c0c4bc93ff1152a0494dd736</sts:QRCode>
+                    <sts:QRCode>https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=463ade33e30cd81c80f6f978d7edbd015c2130fbe63ca3e14cc5180205cb024a582a3d37790097614fd5a00aeeb92f8a</sts:QRCode>
                 </sts:DianExtensions>
             </ext:ExtensionContent>
         </ext:UBLExtension>
@@ -52,19 +52,27 @@ xml = """<?xml version='1.0' encoding='utf-8'?>
     </ext:UBLExtensions>
     <cbc:UBLVersionID>UBL 2.1</cbc:UBLVersionID>
     <cbc:CustomizationID>10</cbc:CustomizationID>
-    <cbc:ProfileID>DIAN 2.1: Factura Electrónica de Venta</cbc:ProfileID>
+    <cbc:ProfileID>DIAN 2.1: Nota Crédito de Factura Electrónica de Venta</cbc:ProfileID>
     <cbc:ProfileExecutionID>2</cbc:ProfileExecutionID>
-    <cbc:ID>SETP991000001</cbc:ID>
-    <cbc:UUID schemeID="2" schemeName="CUFE-SHA384">a475460eb27ba6359abbc3d520f966dd68782667684f0e9ab241a1f606aa0aab0b82c0d7c0c4bc93ff1152a0494dd736</cbc:UUID>
-    <cbc:IssueDate>2025-06-10</cbc:IssueDate>
-    <cbc:IssueTime>16:22:45-05:00</cbc:IssueTime>
+    <cbc:ID>SETP991000021</cbc:ID>
+    <cbc:UUID schemeID="2" schemeName="CUDE-SHA384">463ade33e30cd81c80f6f978d7edbd015c2130fbe63ca3e14cc5180205cb024a582a3d37790097614fd5a00aeeb92f8a</cbc:UUID>
+    <cbc:IssueDate>2025-07-03</cbc:IssueDate>
+    <cbc:IssueTime>11:28:37-05:00</cbc:IssueTime>
     <cbc:InvoiceTypeCode>01</cbc:InvoiceTypeCode>
     <cbc:DocumentCurrencyCode listAgencyID="6" listAgencyName="United Nations Economic Commission for Europe" listID="ISO 4217 Alpha">COP</cbc:DocumentCurrencyCode>
     <cbc:LineCountNumeric>3</cbc:LineCountNumeric>
-    <cac:InvoicePeriod>
-        <cbc:StartDate></cbc:StartDate>
-        <cbc:EndDate></cbc:EndDate>
-    </cac:InvoicePeriod>
+    <cac:DiscrepancyResponse>
+      <cbc:ReferenceID>SETP991000006</cbc:ReferenceID>
+      <cbc:ResponseCode>2</cbc:ResponseCode>
+      <cbc:Description>Anulación de factura electrónica</cbc:Description>
+    </cac:DiscrepancyResponse>
+    <cac:BillingReference>
+        <cac:InvoiceDocumentReference>
+            <cbc:ID>SETP991000006</cbc:ID>
+            <cbc:UUID schemeName="CUFE-SHA384">316f56d58b50fcda18b2fc6a38124e5586c77ed9568639b63a4ab05596fec681851d7526860e4b615248a6e0f26cc4b5</cbc:UUID>
+            <cbc:IssueDate>2025-06-05</cbc:IssueDate>
+        </cac:InvoiceDocumentReference>
+    </cac:BillingReference>
     <cac:AccountingSupplierParty>
         <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
         <cac:Party>
