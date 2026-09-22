@@ -15,8 +15,8 @@ class CertificateData(NamedTuple):
 
 class CertificateLoader:
     def __init__(self):
-        self._sign_path = os.path.join('certificados', 'cert_cmc.pfx')
-        self._sign_password = '8722546'
+        self._sign_path = os.path.join('certificados', 'SOFACTORY_SAS.p12')
+        self._sign_password = 'MW6ENoMcpjTkzCi9'
         self._security = None
         self._politica_path = os.path.join('certificados', 'politicadefirmav2.pdf')
 
